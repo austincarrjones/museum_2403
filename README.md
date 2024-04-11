@@ -15,31 +15,31 @@
 Use TDD to create an `Exhibit` and a `Patron` class that respond to the following interaction pattern:
 
 ```ruby
-pry(main)> require './lib/exhibit'
+pry(main)> require './lib/exhibit' #done
 # => true
 
-pry(main)> require './lib/patron'
+pry(main)> require './lib/patron' #done
 # => true
 
-pry(main)> exhibit = Exhibit.new({name: "Gems and Minerals", cost: 0})
+pry(main)> exhibit = Exhibit.new({name: "Gems and Minerals", cost: 0}) #done
 # => #<Exhibit:0x00007fcb13bd22d0...>
 
-pry(main)> exhibit.name
+pry(main)> exhibit.name #done
 # => "Gems and Minerals"
 
-pry(main)> exhibit.cost
+pry(main)> exhibit.cost #done
 # => 0
 
-pry(main)> patron_1 = Patron.new("Bob", 20)
+pry(main)> patron_1 = Patron.new("Bob", 20) #done
 # => #<Patron:0x00007fcb13b5c7d8...>
 
-pry(main)> patron_1.name
+pry(main)> patron_1.name #done
 # => "Bob"
 
-pry(main)> patron_1.spending_money
+pry(main)> patron_1.spending_money #done
 # => 20
 
-pry(main)> patron_1.interests
+pry(main)> patron_1.interests #done
 # => []
 
 pry(main)> patron_1.add_interest("Dead Sea Scrolls")
