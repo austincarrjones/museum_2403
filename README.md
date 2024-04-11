@@ -42,11 +42,11 @@ pry(main)> patron_1.spending_money #done
 pry(main)> patron_1.interests #done
 # => []
 
-pry(main)> patron_1.add_interest("Dead Sea Scrolls")
+pry(main)> patron_1.add_interest("Dead Sea Scrolls") #done
 
-pry(main)> patron_1.add_interest("Gems and Minerals")
+pry(main)> patron_1.add_interest("Gems and Minerals") #done
 
-pry(main)> patron_1.interests
+pry(main)> patron_1.interests #done
 # => ["Dead Sea Scrolls", "Gems and Minerals"]
 ```
 
@@ -55,43 +55,43 @@ pry(main)> patron_1.interests
 Use TDD to create a `Museum` class that responds to the following interaction pattern. For the `recommend_exhibits` method, the `Museum` should recommend exhibits that match a `Patron`'s interests.
 
 ```ruby
-pry(main)> require './lib/museum'
+pry(main)> require './lib/museum' #done
 # => true
 
-pry(main)> require './lib/patron'
+pry(main)> require './lib/patron' #done
 # => true
 
-pry(main)> require './lib/exhibit'
+pry(main)> require './lib/exhibit' #done
 # => true
 
-pry(main)> dmns = Museum.new("Denver Museum of Nature and Science")
+pry(main)> dmns = Museum.new("Denver Museum of Nature and Science") #done
 # => #<Museum:0x00007fb400a6b0b0...>
 
-pry(main)> dmns.name
+pry(main)> dmns.name #done
 # => "Denver Museum of Nature and Science"
 
-pry(main)> dmns.exhibits
+pry(main)> dmns.exhibits #done
 # => []
 
-pry(main)> gems_and_minerals = Exhibit.new({name: "Gems and Minerals", cost: 0})
+pry(main)> gems_and_minerals = Exhibit.new({name: "Gems and Minerals", cost: 0}) #done
 # => #<Exhibit:0x00007fb400bbcdd8...>
 
-pry(main)> dead_sea_scrolls = Exhibit.new({name: "Dead Sea Scrolls", cost: 10})
+pry(main)> dead_sea_scrolls = Exhibit.new({name: "Dead Sea Scrolls", cost: 10}) #done
 # => #<Exhibit:0x00007fb400b851f8...>
 
-pry(main)> imax = Exhibit.new({name: "IMAX",cost: 15})
+pry(main)> imax = Exhibit.new({name: "IMAX",cost: 15}) #done
 # => #<Exhibit:0x00007fb400acc590...>
 
-pry(main)> dmns.add_exhibit(gems_and_minerals)
+pry(main)> dmns.add_exhibit(gems_and_minerals) #done
 
-pry(main)> dmns.add_exhibit(dead_sea_scrolls)
+pry(main)> dmns.add_exhibit(dead_sea_scrolls) #done
 
-pry(main)> dmns.add_exhibit(imax)
+pry(main)> dmns.add_exhibit(imax) #done
 
-pry(main)> dmns.exhibits
+pry(main)> dmns.exhibits #done
 # => [#<Exhibit:0x00007fb400bbcdd8...>, #<Exhibit:0x00007fb400b851f8...>, #<Exhibit:0x00007fb400acc590...>]
 
-pry(main)> patron_1 = Patron.new("Bob", 20)
+pry(main)> patron_1 = Patron.new("Bob", 20) #done
 # => #<Patron:0x00007fb400a51cc8...>
 
 pry(main)> patron_1.add_interest("Dead Sea Scrolls")
