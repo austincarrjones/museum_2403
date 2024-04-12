@@ -94,19 +94,19 @@ pry(main)> dmns.exhibits #done
 pry(main)> patron_1 = Patron.new("Bob", 20) #done
 # => #<Patron:0x00007fb400a51cc8...>
 
-pry(main)> patron_1.add_interest("Dead Sea Scrolls")
+pry(main)> patron_1.add_interest("Dead Sea Scrolls") #done
 
-pry(main)> patron_1.add_interest("Gems and Minerals")
+pry(main)> patron_1.add_interest("Gems and Minerals") #done
 
-pry(main)> patron_2 = Patron.new("Sally", 20)
+pry(main)> patron_2 = Patron.new("Sally", 20) #done
 # => #<Patron:0x00007fb400036338...>
 
-pry(main)> patron_2.add_interest("IMAX")
+pry(main)> patron_2.add_interest("IMAX") #done
 
-pry(main)> dmns.recommend_exhibits(patron_1)
+pry(main)> dmns.recommend_exhibits(patron_1) #done
 # => [#<Exhibit:0x00007fb400bbcdd8...>, #<Exhibit:0x00007fb400b851f8...>]
 
-pry(main)> dmns.recommend_exhibits(patron_2)
+pry(main)> dmns.recommend_exhibits(patron_2) #done
 # => [#<Exhibit:0x00007fb400acc590...>]
 ```
 
@@ -118,66 +118,65 @@ pry(main)> dmns.recommend_exhibits(patron_2)
 - You will need to use a **stub** to test the `announce_lottery_winner` method in conjunction with the `draw_lottery_winner` method. JOY!
 
 ```ruby
-pry(main)> require './lib/museum'
+pry(main)> require './lib/museum' #done
 # => true
 
-pry(main)> require './lib/patron'
+pry(main)> require './lib/patron' #done
 # => true
 
-pry(main)> require './lib/exhibit'
+pry(main)> require './lib/exhibit' #done
 # => true
 
-pry(main)> dmns = Museum.new("Denver Museum of Nature and Science")
+pry(main)> dmns = Museum.new("Denver Museum of Nature and Science") #done
 # => #<Museum:0x00007fb20205d690...>
 
-pry(main)> gems_and_minerals = Exhibit.new({name: "Gems and Minerals", cost: 0})
+pry(main)> gems_and_minerals = Exhibit.new({name: "Gems and Minerals", cost: 0}) #done
 # => #<Exhibit:0x00007fb202238618...>
 
-pry(main)> dead_sea_scrolls = Exhibit.new({name: "Dead Sea Scrolls", cost: 10})
+pry(main)> dead_sea_scrolls = Exhibit.new({name: "Dead Sea Scrolls", cost: 10}) #done
 # => #<Exhibit:0x00007fb202248748...>
 
-pry(main)> imax = Exhibit.new({name: "IMAX",cost: 15})
+pry(main)> imax = Exhibit.new({name: "IMAX",cost: 15}) #done
 # => #<Exhibit:0x00007fb20225f8d0...>
 
-pry(main)> dmns.add_exhibit(gems_and_minerals)
+pry(main)> dmns.add_exhibit(gems_and_minerals) #done
 
-pry(main)> dmns.add_exhibit(dead_sea_scrolls)
+pry(main)> dmns.add_exhibit(dead_sea_scrolls) #done
 
-pry(main)> dmns.add_exhibit(imax)
+pry(main)> dmns.add_exhibit(imax) #done
 
-pry(main)> dmns.patrons
+pry(main)> dmns.patrons #done
 # => []
 
-pry(main)> patron_1 = Patron.new("Bob", 0)
+pry(main)> patron_1 = Patron.new("Bob", 0) #done
 # => #<Patron:0x00007fb2011455b8...>
 
-pry(main)> patron_1.add_interest("Gems and Minerals")
+pry(main)> patron_1.add_interest("Gems and Minerals") #done
 
-pry(main)>
-patron_1.add_interest("Dead Sea Scrolls")
+pry(main)> patron_1.add_interest("Dead Sea Scrolls") #done
 
-pry(main)> patron_2 = Patron.new("Sally", 20)
+pry(main)> patron_2 = Patron.new("Sally", 20) #done
 # => #<Patron:0x00007fb20227f8b0...>
 
-pry(main)> patron_2.add_interest("Dead Sea Scrolls")
+pry(main)> patron_2.add_interest("Dead Sea Scrolls") #done
 
-pry(main)> patron_3 = Patron.new("Johnny", 5)
+pry(main)> patron_3 = Patron.new("Johnny", 5) #done
 # => #<Patron:0x6666fb20114megan...>
 
-pry(main)> patron_3.add_interest("Dead Sea Scrolls")
+pry(main)> patron_3.add_interest("Dead Sea Scrolls") #done
 
-pry(main)> dmns.admit(patron_1)
+pry(main)> dmns.admit(patron_1) #done
 
-pry(main)> dmns.admit(patron_2)
+pry(main)> dmns.admit(patron_2) #done
 
-pry(main)> dmns.admit(patron_3)
+pry(main)> dmns.admit(patron_3) #done
 
-pry(main)> dmns.patrons
+pry(main)> dmns.patrons #done
 # => [#<Patron:0x00007fb2011455b8...>, #<Patron:0x00007fb20227f8b0...>, #<Patron:0x6666fb20114megan...>]
 
 #Patrons are added even if they don't have enough money for all/any exhibits.
 
-pry(main)> dmns.patrons_by_exhibit_interest
+pry(main)> dmns.patrons_by_exhibit_interest #done
 # =>
 # {
 #   #<Exhibit:0x00007fb202238618...> => [#<Patron:0x00007fb2011455b8...>],
@@ -185,23 +184,23 @@ pry(main)> dmns.patrons_by_exhibit_interest
 #   #<Exhibit:0x00007fb20225f8d0...> => []
 # }
 
-pry(main)> dmns.ticket_lottery_contestants(dead_sea_scrolls)
+pry(main)> dmns.ticket_lottery_contestants(dead_sea_scrolls) #done
 # => [#<Patron:0x00007fb2011455b8...>, #<Patron:0x6666fb20114megan...>]
 
-pry(main)> dmns.draw_lottery_winner(dead_sea_scrolls)
+pry(main)> dmns.draw_lottery_winner(dead_sea_scrolls) #done
 # => "Johnny" or "Bob" can be returned here. Fun!
 
-pry(main)> dmns.draw_lottery_winner(gems_and_minerals)
+pry(main)> dmns.draw_lottery_winner(gems_and_minerals) #done
 # => nil
 
 #If no contestants are elgible for the lottery, nil is returned.
 
-pry(main)> dmns.announce_lottery_winner(imax)
-# => "Bob has won the IMAX edhibit lottery"
+pry(main)> dmns.announce_lottery_winner(imax) #done
+# => "Bob has won the IMAX exhibit lottery"
 
 # The above string should match exactly, you will need to stub the return of `draw_lottery_winner` as the above method should depend on the return value of `draw_lottery_winner`.
 
-pry(main)> dmns.announce_lottery_winner(gems_and_minerals)
+pry(main)> dmns.announce_lottery_winner(gems_and_minerals) #done
 # => "No winners for this lottery"
 
 # If there are no contestants, there are no winners.
