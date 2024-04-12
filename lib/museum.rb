@@ -13,25 +13,16 @@ class Museum
   end
 
   def recommend_exhibits(patron)
-    interests_and_exhibits = [] #combo array of interests and exhibit names
-    #check patron.interests array. See if any elements match @exhibits array. 
-    #exhibits array are objects, need to isolate exhibit.name
-    #Return array.
-    #combine the arrays? Then look for duplicates? using .tally, 
-    #then anything over 1 could be the match
+    recommendations = [] 
     patron.interests.each do |interest|
-      interests_and_exhibits << interest
+      @exhibits.each do |exhibit|
+         #nested iteration
+        if interest == exhibit.name #guard statement
+          recommendations << exhibit
+        end
+      end
     end
-    @exhibits.each do |exhibit|
-      interests_and_exhibits << exhibit.name
-    end
-    #now we have array with duplicates. We want to know the duplicates. 
-    duplicates = interests_and_exhibits.select do |name|
-      interests_and_exhibits.count(name) > 1
-    end
-    duplicates.uniq
+    recommendations
   end
-
-
 
 end
